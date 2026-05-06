@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Same Tab Links</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <header class="header">
+      <h1 class="title">Same Tab Links</h1>
+      <div class="status-badge" id="statusBadge">Active</div>
+    </header>
+
+    <section class="section">
+      <div class="toggle-row">
+        <label class="toggle-label" for="mainToggle">Extension enabled</label>
+        <input type="checkbox" id="mainToggle" class="toggle" checked>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Add Website</h2>
+      <input type="text" id="urlInput" class="input-url" placeholder="Paste any URL here">
+      <select id="scopeSelect" class="scope-select">
+        <option value="domain" selected>Entire domain</option>
+        <option value="subdomain">All subdomains</option>
+        <option value="exact">Exact page only</option>
+      </select>
+      <button type="button" id="addUrl" class="btn btn-primary">Add Site</button>
+      <p class="preview" id="patternPreview"></p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Active websites</h2>
+      <div class="site-list" id="siteList"></div>
+    </section>
+
+    <section class="section footer-section">
+      <button type="button" id="exportBtn" class="btn btn-secondary">Export</button>
+      <button type="button" id="importBtn" class="btn btn-secondary">Import</button>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
